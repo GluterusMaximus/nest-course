@@ -6,19 +6,19 @@ import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
-  constructor(private usersService: UsersService) {}
+  constructor(private userService: UsersService) {}
 
   @ApiOperation({ summary: 'Create new user' })
   @ApiResponse({ status: 201, type: User })
   @Post()
   createUser(@Body() UserDto: CreateUserDto) {
-    return this.usersService.createUser(UserDto);
+    return this.userService.createUser(UserDto);
   }
 
   @ApiOperation({ summary: 'Get all users' })
   @ApiResponse({ status: 200, type: [User] })
   @Get()
   getAll() {
-    return this.usersService.getAllUsers();
+    return this.userService.getAllUsers();
   }
 }
