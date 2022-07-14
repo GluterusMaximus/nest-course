@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
-import { CreateRoleDto } from './dto/create-role.dto';
+import { CreateRoleDto } from './dtos/create-role.dto';
 import { RolesService } from './roles.service';
 
 @Controller('roles')
